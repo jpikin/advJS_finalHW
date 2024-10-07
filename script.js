@@ -3,6 +3,7 @@ const sendBtn = document.querySelector('.send-btn');
 const prodTitle = document.querySelector('.title');
 const prodComment = document.querySelector('.text');
 let ID = 0;
+//TODO проверить уникальность ключа
 
 
 sendBtn.addEventListener('click', () => {
