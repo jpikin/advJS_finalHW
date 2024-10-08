@@ -16,7 +16,7 @@ for (let key in localStorage) {
         const prodName = JSON.parse(localStorage.getItem(key)).title;
         if (!prodList.textContent.includes(prodName)) {
             const li = document.createElement('li');
-            li.classList.add('product-name');
+            li.classList.add('product-name', 'pointer');
             li.textContent = prodName;
             prodList.append(li);
             li.addEventListener('click', ()=>{
@@ -32,7 +32,7 @@ for (let key in localStorage) {
                             commentLi.textContent = comment;
                             commentsUl.append(commentLi);
                             const newSpan = document.createElement("span");
-                            newSpan.classList.add('remove-btn');
+                            newSpan.classList.add('remove-btn', 'pointer');
                             newSpan.textContent = 'Удалить';
                             newSpan.addEventListener('click', () => {
                                 localStorage.removeItem(key);

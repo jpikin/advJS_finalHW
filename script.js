@@ -9,6 +9,7 @@ sendBtn.addEventListener('click', () => {
     const title = prodTitle.value;
     const comment = prodComment.value;
     if (!title || !comment) {
+        alert("Заполните все поля!");
         return;
     }
     while(true) {

@@ -37,13 +37,7 @@
 }
 .remove-btn {
     color: blue;
-    &:hover {
-        cursor: pointer;
-    }
 }
-.product-name:hover {
-    cursor: pointer;
-}
-.send-btn:hover{
+.pointer:hover {
     cursor: pointer;
 }
