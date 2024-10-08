@@ -3,14 +3,22 @@ const sendBtn = document.querySelector('.send-btn');
 const prodTitle = document.querySelector('.title');
 const prodComment = document.querySelector('.text');
 let ID = 0;
-//TODO проверить уникальность ключа
-
 
 sendBtn.addEventListener('click', () => {
     const title = prodTitle.value;
     const comment = prodComment.value;
-    localStorage.setItem(ID++, JSON.stringify({title, comment}));
-    prodTitle.value = '';
-    prodComment.value = '';
+    if (!title || !comment) {
+        return;
+    }
+    while(true) {
+        if (ID in localStorage) {
+            ID++;
+        } else {
+            localStorage.setItem(ID, JSON.stringify({title, comment}));
+            prodTitle.value = '';
+            prodComment.value = '';
+            break;
+        }
+    }
 });
 
