@@ -1,8 +1,14 @@
 const localStorage = window.localStorage;  
+const clear = document.querySelector('.clear-btn');
 const prodList = document.querySelector('.product-list');
 const comments = document.querySelector('.comments');
 const commentsUl = document.createElement('ul');
 comments.append(commentsUl);
+
+clear.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload();
+});
 
 
 for (let key in localStorage) {
