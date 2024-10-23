@@ -7,7 +7,6 @@ comments.append(commentsUl);
 
 clear.addEventListener('click', () => {
     localStorage.clear();
-    location.reload();
 });
 
 
